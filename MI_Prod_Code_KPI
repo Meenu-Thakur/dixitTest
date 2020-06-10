@@ -16,7 +16,8 @@
 				
                     set<id> newset=new set<id>();
                     newset.add(op.AccountId);
-                    mapParentAccAccount.put(AccountId+ '_' +CloseYear+ '_' +op.Current_Quarter__c,newset);
+                    
+					mapParentAccAccount.put(AccountId+ '_' +CloseYear+ '_' +op.Current_Quarter__c,newset);
                     if(op.ACV_First_Year_Sub_Renewal__c > 0 || op.ACV_First_Year_Maint_Renewal__c > 0){
                         opWrapper.RenewalCustomerCount = mapParentAccAccount.get(AccountId+ '_' +CloseYear+ '_' +op.Current_Quarter__c).size();
                     }
