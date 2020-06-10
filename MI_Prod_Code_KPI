@@ -13,6 +13,7 @@
                     opWrapper.Unique_Numbers_of_Customers=mapParentAccAccount.get(AccountId+ '_' +CloseYear+ '_' +op.Current_Quarter__c).size();
                 }
 	            else{
+				
                     set<id> newset=new set<id>();
                     newset.add(op.AccountId);
                     mapParentAccAccount.put(AccountId+ '_' +CloseYear+ '_' +op.Current_Quarter__c,newset);
